@@ -1,0 +1,18 @@
+version: '2'
+
+networks:
+  spark_project_network:
+    name: spark_project_network
+    external: true
+
+services:
+  minio:
+    image: 'bitnami/minio:latest'
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    environment:
+      - MINIO_ROOT_USER=admin-admin
+      - MINIO_ROOT_PASSWORD=admin-admin
+    networks:
+      - spark_project_network
