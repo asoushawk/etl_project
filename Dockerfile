@@ -18,11 +18,13 @@ FROM docker.io/ubuntu
 #RUN apt-get update
 ##RUN apt-get install oracle-java8-installer
 # configure the container to run in an executed manner
-#ENTRYPOINT [ "python" ]
+#ENTRYPOINT [ "bash" ]
 
-#CMD ["main.py" ]
+#RUN bin/bash
+
+#CMD ["/home/install_comands.sh" ]
 
 
 #docker run -it -v $(pwd)/home:/home great_khayyam
 
-docker run -it -v $(pwd)/home:/home --network spark_project_network bin/bash
+#docker run -it -v $(pwd)/home:/home --network spark_project_network bin/bash

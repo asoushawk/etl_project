@@ -18,7 +18,7 @@ MINIO_SECRETKEY = "ZQf5hwB9BYsN0fLjSTOlpZ560uXrZHZD"
 
 
 
-spark._jsc.hadoopConfiguration().set("fs.s3a.endpoint", "http://minio:9000")
+spark._jsc.hadoopConfiguration().set("fs.s3a.endpoint", "http://localhost:9000")
 spark._jsc.hadoopConfiguration().set("fs.s3a.access.key", MINIO_ACCESSKEY)
 spark._jsc.hadoopConfiguration().set("fs.s3a.secret.key", MINIO_SECRETKEY)
 spark._jsc.hadoopConfiguration().set("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
